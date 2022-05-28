@@ -17,7 +17,9 @@ export class GenralDataService {
     return this.http.get(`${environment.baseurl}/users/applications/all`)
   }
 
-  
+  get_all_actifs(){
+  return this.http.get(`http://localhost:8081/users/actifs/all`)
+  } 
 
   save_typeActif(ActifData:any){
     return this.http.post(`${environment.baseurl}/users/types/save`, ActifData)
